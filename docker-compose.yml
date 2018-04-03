@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mysql:
+    container_name: mysql
+    image: ademord/marketplace_db
+    command: mysqld --sql_mode=""
+    ports:
+      - "3306:3306"
+  marketplace:
+    container_name: marketplace
+    image: ademord/marketplace
+    ports:
+      - "8080:8080"
+      - "4848:4848"

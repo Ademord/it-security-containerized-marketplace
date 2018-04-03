@@ -5,15 +5,66 @@
     <artifactId>Marketplace_Lab</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
+    
     <name>Marketplace_Lab</name>
+    
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <modules>
         <module>Marketplace_Lab-ear</module>
         <module>Marketplace_Lab-web</module>
         <module>Marketplace_Lab-rest</module>
         <module>Marketplace_Lab-common</module>
-  </modules>
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                 <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.4.10</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <imageName>ademord/marketplace</imageName>
+                        <baseImage>ademord/glassfish</baseImage>
+                        
+                        <resources>        <!-- Dockerfile building resources -->
+                            <resource>
+                                <targetPath>/usr/glassfish/glassfish/domains/domain1/autodeploy</targetPath>
+                                <directory>Marketplace_Lab-ear/target/</directory>
+                                <include>${project.build.finalName}.ear</include>
+                            </resource>
+                            <resource>
+                                <targetPath>/usr/glassfish/glassfish/lib</targetPath>
+                                <directory>mysql-connector</directory>
+                            </resource>
+                        </resources>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>javax.activation</groupId>
+                            <artifactId>activation</artifactId>
+                            <version>1.1.1</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>5.1.39</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

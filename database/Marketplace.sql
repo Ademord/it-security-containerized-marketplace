@@ -79,11 +79,11 @@ INSERT INTO Purchase VALUES (1, 'Ferrari', 'Driver', '1111 2222 3333 4444', 2500
 
 USE mysql;
 
-DROP USER IF EXISTS 'marketplace'@'localhost';
+DROP USER IF EXISTS 'marketplace_user'@'%';
 
-CREATE USER 'marketplace'@'localhost' IDENTIFIED BY 'marketplace';
+CREATE USER 'marketplace_user'@'%' IDENTIFIED BY 'changeit';
 
-GRANT SELECT         ON `marketplace`.* TO 'marketplace'@'localhost';
-GRANT UPDATE         ON `marketplace`.`UserInfo` TO 'marketplace'@'localhost';
-GRANT INSERT, DELETE ON `marketplace`.`Product` TO 'marketplace'@'localhost';
-GRANT INSERT, DELETE ON `marketplace`.`Purchase` TO 'marketplace'@'localhost';
+GRANT SELECT         ON `marketplace`.* TO 'marketplace_user'@'%';
+GRANT UPDATE         ON `marketplace`.`UserInfo` TO 'marketplace_user'@'%';
+GRANT INSERT, DELETE ON `marketplace`.`Product` TO 'marketplace_user'@'%';
+GRANT INSERT, DELETE ON `marketplace`.`Purchase` TO 'marketplace_user'@'%';

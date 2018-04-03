@@ -1,0 +1,10 @@
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/Error403Servlet.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/Error401Servlet.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/AdminProductRest.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/AuthenticationRest.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/ProductRest.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/PurchaseRest.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/CustomExceptionMapper.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/ConstraintViolationExceptionMapper.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/ApplicationConfig.java
+/Users/ribr/Documents/IT_Sec/Marketplace/Marketplace_Lab/Marketplace_Lab-rest/src/main/java/ch/zhaw/securitylab/marketplace/rest/AdminPurchaseRest.java
